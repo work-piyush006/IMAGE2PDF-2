@@ -5,7 +5,7 @@ from telegram.ext import Application, CommandHandler, CallbackQueryHandler, Mess
 from fpdf import FPDF
 
 # --- CONFIG ---
-BOT_TOKEN = "7693918135:AAGO-4A2lCRMaDnpmItkOY94w1f16_D0iSw"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 UPI_ID = "work.piyush006@fam"
 QR_IMAGE_PATH = "Qr.png"
 PREMIUM_FILE = "user_premium.txt"
@@ -209,7 +209,6 @@ async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE):
 # --- MAIN ---
 if __name__ == "__main__":
     app = Application.builder().token(BOT_TOKEN).build()
-
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(button_handler))
     app.add_handler(MessageHandler(filters.PHOTO, handle_image))
