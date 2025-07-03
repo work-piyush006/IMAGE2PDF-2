@@ -5,7 +5,7 @@ from telegram.ext import Application, CommandHandler, CallbackQueryHandler, Mess
 from fpdf import FPDF
 
 # --- CONFIG ---
-BOT_TOKEN = "7693918135:AAGO-4A2lCRMaDnpmItkOY94w1f16_D0iSw"  # Replace with your actual bot token
+BOT_TOKEN = "7693918135:AAGO-4A2lCRMaDnpmItkOY94w1f16_D0iSw"  # ✅ Your real token
 UPI_ID = "work.piyush006@fam"
 QR_IMAGE_PATH = "Qr.png"
 PREMIUM_FILE = "user_premium.txt"
@@ -83,7 +83,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             reply_markup=reply_markup
         )
 
-# --- BUTTONS ---
+# --- BUTTON HANDLER ---
 async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
@@ -217,3 +217,4 @@ if __name__ == "__main__":
 
     print("🤖 Bot is running...")
     app.run_polling()
+    
