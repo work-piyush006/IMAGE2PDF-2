@@ -215,4 +215,5 @@ if __name__ == "__main__":
     app.add_error_handler(error_handler)
 
     print("🤖 Bot is running...")
+    print("BOT_TOKEN:", BOT_TOKEN)
     app.run_polling()
